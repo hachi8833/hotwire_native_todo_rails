@@ -22,6 +22,11 @@
   </div>
 
   <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.rich_text_area :descritpion, data: {controller: 'bridge--keyboard', action: 'focusin->bridge--keyboard#toggleToolbar focusout->bridge--keyboard#toggleToolbar'} %>
+  </div>
+
+  <div>
     <%= form.submit data: {bridge__form_target: "submit", bridge_title: 'Save'}, class: 'hidden-on-native' %>
   </div>
 <% end %>
